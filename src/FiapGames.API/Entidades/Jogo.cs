@@ -12,4 +12,15 @@ public class Jogo : Entity
         Titulo = titulo;
         Preco = preco;
     }
+
+    public void AtualizarDados(string titulo, decimal preco)
+    {
+        Titulo = titulo;
+        Preco = preco;
+    }
+
+    public void AlterarPreco(decimal preco)
+    {
+        Preco = preco;
+    }
 }

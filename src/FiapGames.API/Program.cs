@@ -1,4 +1,6 @@
 using FiapGames.API.Data.Contexts;
+using FiapGames.API.Interfaces;
+using FiapGames.API.Servicos;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +16,8 @@ builder.Services.AddDbContext<FiapGamesDbContext>(options =>
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IJogoServico, JogoServico>();
 
 var app = builder.Build();
 
